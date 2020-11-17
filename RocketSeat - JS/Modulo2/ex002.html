@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Módulo 2</title>
+</head>
+<body>
+    <div id="ex1">
+        <button onclick="criarQuadrado()">Quadrado</button>
+        <div id="link">
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //exercício 1
+        function criarQuadrado() {
+
+            let boxElement = document.createElement("div");
+            boxElement.style.width = '180px';
+            boxElement.style.height = '180px';
+            boxElement.style.margin = '10px';
+            boxElement.style.backgroundColor = '#f00';
+
+            //adiciona a classe .box na div criada
+            boxElement.classList.add('box');
+
+            //document.body.appendChild(boxElement);
+            var divElement = document.querySelector('#link');
+            divElement.appendChild(boxElement);
+        }
+
+        //exercício 2
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+    </script>
+</body>
+</html>
